@@ -1,31 +1,31 @@
 class Tyrionc < Formula
   desc "C bootstrap compiler for Tyrionic"
   homepage "https://github.com/tyrionic/tyrionc"
-  version "0.1.0"
+  version "0.1.1"
   license "MIT"
-  release_tag = "0.1.0"
+  release_tag = "0.1.1"
 
   on_macos do
     on_arm do
       url "https://github.com/tyrionic/tyrionc/releases/download/#{release_tag}/tyrionc-mac-arm64"
-      sha256 "c973db10c450ae97d9a5c5b17ebb90fa3b8219bdd989fc021fe92d75bda99ec9"
+      sha256 "b91522df735bfe05f05a6503b3ffebb30441a1da6d242b2c7661bf0c0669caa3"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/tyrionic/tyrionc/releases/download/#{release_tag}/tyrionc-linux-amd64"
-      sha256 "312a53128c25143ccc6210da2c697ce377adf7f5b15bb1a480a4aae24204a2a8"
+      sha256 "acf4061d89ee94dbcaa480e1414c42a1420fe5e656375c60e9cc55043e93137d"
     end
     on_arm do
       url "https://github.com/tyrionic/tyrionc/releases/download/#{release_tag}/tyrionc-linux-arm64"
-      sha256 "48d7e5eb3d4259bd3bc31aa3f7d050e001fda7070b0de454e474e164dc44b8c9"
+      sha256 "4c0017980da4783c4af87afd9ab28b42e67b9351bcbc7c4654ab089671ecf571"
     end
   end
 
   resource "tyrionc_source" do
     url "https://github.com/tyrionic/tyrionc/archive/refs/tags/#{release_tag}.tar.gz"
-    sha256 "fbcbafe18ac21ba7f163aba31275206397a230bc60e5dc25644f2f5e4565ee41"
+    sha256 "13674b34f56887560ea2de2faf4b8dc777e17a57cb12c3f7cea6fcfcf299e079"
   end
 
   def install
